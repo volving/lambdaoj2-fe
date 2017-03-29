@@ -14,6 +14,7 @@ import Profile from 'oj/Profile';
 
 require('foundation.min.css');
 require('main.less');
+// require('foundation.min.js');
  // path="problems"
 render(
     <Router history={hashHistory}>

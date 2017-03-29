@@ -16,12 +16,29 @@ export default class Nav extends React.Component {
                     </div>
 
                     <div className="top-bar-right">
-                        <ul className="menu" id={this.props.componentId || 'nav'}>
+                        <ul className="dropdown menu" data-dropdown-menu id={this.props.componentId || 'nav'}>
                             <li>
                                 <IndexLink activeClassName="active" activeStyle={activeStyle} to="/">Home</IndexLink>
                             </li>
                             <li>
                                 <IndexLink activeClassName="active" activeStyle={activeStyle} to="/oj">Online Judge</IndexLink>
+                                <ul className="menu">
+                                    <li>
+                                        <IndexLink activeClassName="active" activeStyle={activeStyle} to="oj">Problems</IndexLink>
+                                    </li>
+                                    <li>
+                                        <IndexLink activeClassName="active" activeStyle={activeStyle} to="oj/submit">Submit</IndexLink>
+                                    </li>
+                                    <li>
+                                        <IndexLink activeClassName="active" activeStyle={activeStyle} to="oj/status">Status</IndexLink>
+                                    </li>
+                                    <li>
+                                        <IndexLink activeClassName="active" activeStyle={activeStyle} to="oj/profile">Profile</IndexLink>
+                                    </li>
+                                    <li>
+                                        <IndexLink activeClassName="active" activeStyle={activeStyle} to="/logout">Logout</IndexLink>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                                 <IndexLink activeClassName="active" activeStyle={activeStyle} to="/login">Login</IndexLink>
