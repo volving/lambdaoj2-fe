@@ -15,7 +15,7 @@ export default class Login extends React.Component {
                         <label for="remember" ref="remember">
                             <input id="remember" type="checkbox"/>
                             Remember me</label>
-                        <input type="button" value="Sign in" className="button success expanded"/>
+                        <button className="button success expanded">Sign in</button>
                         <a className="button small right warning">Register</a>
                     </form>
                 </div>
