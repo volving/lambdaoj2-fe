@@ -1,0 +1,56 @@
+body,
+div,
+header,
+li,
+p,
+ul {
+    margin: 0;
+    padding: auto;
+}
+@tsThemeBGColor: #5C307D;
+@tsThemeColor: #FFC600;
+@navLinkActiveColor: @tsThemeColor;
+#main{
+
+}
+.top-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: @tsThemeBGColor;
+    .menu {
+        background-color: @tsThemeBGColor;
+
+        .menu-text {
+            color: white;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+    }
+    padding: 0.6em;
+
+    a[href] {
+        color: white;
+        display: inline-block;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: bold;
+
+        &:hover {
+            color: @navLinkActiveColor;
+        }
+        transition: 0.2s color ease-in-out;
+
+        &:not(:last-child) {
+            margin-right: 1em;
+        }
+
+        &.active {
+            color: @navLinkActiveColor;
+        }
+    }
+}
+
+.content{
+    margin-top: 4rem;
+}
