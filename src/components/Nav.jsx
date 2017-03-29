@@ -1,11 +1,29 @@
 import React from 'react';
 import {IndexLink} from 'react-router';
 
+var activeStyle = {
+    fontWeight: 'bold'
+};
+class LogInOut extends React.Component {
+    render() {
+        if (this.props.validSession) {
+            return (
+                <li>
+                    <IndexLink activeClassName="active" activeStyle={activeStyle} to="/logout">Logout</IndexLink>
+                </li>
+            );
+        } else {
+            return (
+                <li>
+                    <IndexLink activeClassName="active" activeStyle={activeStyle} to="/login">Login</IndexLink>
+                </li>
+            );
+        }
+    }
+}
+
 export default class Nav extends React.Component {
     render() {
-        var activeStyle = {
-            fontWeight: 'bold'
-        };
         return (
             <div className="top-bar">
                 <div className="row">
@@ -35,14 +53,9 @@ export default class Nav extends React.Component {
                                     <li>
                                         <IndexLink activeClassName="active" activeStyle={activeStyle} to="oj/profile">Profile</IndexLink>
                                     </li>
-                                    <li>
-                                        <IndexLink activeClassName="active" activeStyle={activeStyle} to="/logout">Logout</IndexLink>
-                                    </li>
                                 </ul>
                             </li>
-                            <li>
-                                <IndexLink activeClassName="active" activeStyle={activeStyle} to="/login">Login</IndexLink>
-                            </li>
+                            <LogInOut validSession={false}/>
                         </ul>
                     </div>
                 </div>
