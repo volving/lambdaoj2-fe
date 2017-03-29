@@ -11,6 +11,7 @@ ul {
 @tsThemeBGColorLight: lightness(@tsThemeBGColor);
 @tsThemeColor: #FFC600;
 @navLinkActiveColor: @tsThemeColor;
+@themeBgColor: #D5D5D5;
 
 .apple() {
     box-shadow: 0 0 2.5em #5d656c;
@@ -63,6 +64,7 @@ ul {
 
 .logPage {
     margin-top: 5rem;
+
     form {
         .apple();
         padding: 1rem 3em 2em;
@@ -80,28 +82,70 @@ ul {
             z-index: -1;
         }
 
-        h2, p{
+        h2,
+        p {
             color: white;
         }
-        p{
+
+        p {
             font-size: 0.8em;
         }
+
         input {
             border-radius: 0.25rem;
             margin-bottom: 0;
             margin-top: 1em;
+
             &:last-child {
                 margin-bottom: 1em;
             }
         }
-        label{
+
+        label {
             color: white;
             margin-bottom: 0.5rem;
         }
+
         .button {
             color: white;
             font-weight: bold;
             border-radius: 0.25rem;
+        }
+    }
+}
+
+.problemsPage {
+    .problemItem {
+        margin-bottom: 0.25em;
+        display: flex;
+        flex-direction: column;
+
+        a {
+            flex-grow: 1;
+            display: inline-block;
+            min-height: 2em;
+            line-height: 2em;
+            background-color: @themeBgColor;
+            color: black;
+            padding: 0 0.5rem;
+
+            &:hover {
+                background-color: lighten(@themeBgColor, 10%);
+            }
+            transition: background-color 0.3s ease-in-out;
+
+            .sn {
+                color: @tsThemeColor;
+                display: inline-block;
+                min-width: 2em;
+                height: 2em;
+                text-align: center;
+                line-height: 2em;
+                background-color: @tsThemeBGColor;
+                margin-right: 0.5em;
+                margin-left: -0.5rem;
+                padding: 0 0.5em;
+            }
         }
     }
 }

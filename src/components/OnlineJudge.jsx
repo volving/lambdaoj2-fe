@@ -12,7 +12,7 @@ export default class OnlineJudge extends React.Component {
                         <IndexLink activeClassName="active" activeStyle={activeStyle} to="oj">Problems</IndexLink>
                     </li>
                     <li>
-                        <IndexLink activeClassName="active" activeStyle={activeStyle} to="oj/submits">Submit</IndexLink>
+                        <IndexLink activeClassName="active" activeStyle={activeStyle} to="oj/submit">Submit</IndexLink>
                     </li>
                     <li>
                         <IndexLink activeClassName="active" activeStyle={activeStyle} to="oj/status">Status</IndexLink>

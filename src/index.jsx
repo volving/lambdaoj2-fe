@@ -8,7 +8,7 @@ import Login from 'Login';
 import Main from 'Main';
 
 import Problems from 'oj/Problems';
-import Submits from 'oj/Submits';
+import Submit from 'oj/Submit';
 import Status from 'oj/Status';
 import Profile from 'oj/Profile';
 
@@ -21,7 +21,7 @@ render(
             <IndexRoute component={Home}/>
             <Route path="oj" component={OnlineJudge}>
                 <IndexRoute component={Problems}></IndexRoute>
-                <Route path="submits" component={Submits}></Route>
+                <Route path="submit" component={Submit}></Route>
                 <Route path="status" component={Status}></Route>
                 <Route path="profile" component={Profile}></Route>
             </Route>
