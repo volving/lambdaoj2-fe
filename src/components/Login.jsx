@@ -3,10 +3,32 @@ import React from 'react';
 export default class Login extends React.Component {
     render() {
         return (
-            <div>
-                <h1>Me</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div className="logPage row">
+                <div className="blured">
+                    <form onSubmit={this.handleSubmit} className="small-12 large-4 large-offset-4 columns">
+                        <h2>Log in</h2>
+                        <div className="bg"></div>
+                        <input type="text" ref="userName" placeholder="Enter user name"/>
+                        <input type="password" ref="password" placeholder="Enter password"/>
+                        <p class="help-text" id="passwordHelpText">Your password must have at least 10 characters, a number, and an Emoji.</p>
+                        <input type="text" ref="studentId" placeholder="Enter student id"/>
+                        <label for="remember" ref="remember">
+                            <input id="remember" type="checkbox"/>
+                            Remember me</label>
+                        <input type="button" value="Sign in" className="button success expanded"/>
+                        <a className="button small right warning">Register</a>
+                    </form>
+                </div>
             </div>
         );
+    }
+    handleSubmit(e) {
+        e.preventDefault();
+        if (this.validateInput()) {
+            //TODO
+        }
+    }
+    validateInput() {
+        return true;
     }
 }

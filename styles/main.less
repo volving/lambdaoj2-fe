@@ -8,16 +8,22 @@ ul {
     padding: auto;
 }
 @tsThemeBGColor: #5C307D;
+@tsThemeBGColorLight: lightness(@tsThemeBGColor);
 @tsThemeColor: #FFC600;
 @navLinkActiveColor: @tsThemeColor;
-#main{
 
+.apple() {
+    box-shadow: 0 0 2.5em #5d656c;
 }
+
+#main {}
+
 .top-bar {
     position: fixed;
     top: 0;
     width: 100%;
     background-color: @tsThemeBGColor;
+
     .menu {
         background-color: @tsThemeBGColor;
 
@@ -51,6 +57,51 @@ ul {
     }
 }
 
-.content{
+.content {
     margin-top: 4rem;
+}
+
+.logPage {
+    margin-top: 5rem;
+
+    form {
+        .apple();
+        padding: 1rem 3em 2em;
+        position: relative;
+        border-radius: 0.75rem;
+
+        .bg {
+            border-radius: 0.75rem;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(-1deg, @tsThemeBGColor, lighten(@tsThemeBGColor, 10%));
+            z-index: -1;
+        }
+
+        h2, .help-text{
+            color: white;
+        }
+        .help-text{
+            font-size: 0.8em;
+        }
+        input {
+            border-radius: 0.25rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        label{
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+        .button {
+            color: white;
+            font-weight: bold;
+            border-radius: 0.25rem;
+        }
+    }
 }

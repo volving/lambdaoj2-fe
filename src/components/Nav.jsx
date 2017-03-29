@@ -3,6 +3,9 @@ import {IndexLink} from 'react-router';
 
 export default class Nav extends React.Component {
     render() {
+        var activeStyle = {
+            fontWeight: 'bold'
+        };
         return (
             <div className="top-bar">
                 <div className="row">
@@ -15,19 +18,13 @@ export default class Nav extends React.Component {
                     <div className="top-bar-right">
                         <ul className="menu" id={this.props.componentId || 'nav'}>
                             <li>
-                                <IndexLink activeClassName="active" activeStyle={{
-                                    fontWeight: 'bold'
-                                }} to="/">Home</IndexLink>
+                                <IndexLink activeClassName="active" activeStyle={activeStyle} to="/">Home</IndexLink>
                             </li>
                             <li>
-                                <IndexLink activeClassName="active" activeStyle={{
-                                    fontWeight: 'bold'
-                                }} to="/about">About</IndexLink>
+                                <IndexLink activeClassName="active" activeStyle={activeStyle} to="/oj">Online Judge</IndexLink>
                             </li>
                             <li>
-                                <IndexLink activeClassName="active" activeStyle={{
-                                    fontWeight: 'bold'
-                                }} to="/login">Login</IndexLink>
+                                <IndexLink activeClassName="active" activeStyle={activeStyle} to="/login">Login</IndexLink>
                             </li>
                         </ul>
                     </div>
