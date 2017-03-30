@@ -10,9 +10,9 @@ export default class Login extends React.Component {
                         <div className="bg"></div>
                         <input type="text" ref="userName" placeholder="Enter user name"/>
                         <input type="password" ref="password" placeholder="Enter password"/>
-                        <p class="help-text" id="passwordHelpText">Your password must have at least 10 characters, a number, and an Emoji.</p>
+                        <p className="help-text" id="passwordHelpText">Your password must have at least 10 characters, a number, and an Emoji.</p>
                         <input type="text" ref="studentId" placeholder="Enter student id"/>
-                        <label for="remember" ref="remember">
+                        <label htmlFor="remember" ref="remember">
                             <input id="remember" type="checkbox"/>
                             Remember me</label>
                         <button className="button success expanded">Sign in</button>
